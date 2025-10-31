@@ -1,4 +1,4 @@
-# 🚀 TalentFlow - Enterprise Hiring Platform
+# 🚀 TalentFlow - Mini Hiring Platform
 
 <div align="center">
 
