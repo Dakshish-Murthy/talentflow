@@ -1,260 +1,263 @@
-TalentFlow - Enterprise Hiring Platform
-TalentFlow is a comprehensive, full-stack hiring platform that streamlines the recruitment process for both HR teams and candidates. Built with modern React and TypeScript, it provides a seamless experience for job management, candidate tracking, and assessment creation.
+# 🚀 TalentFlow - Enterprise Hiring Platform
 
-https://img.shields.io/badge/TalentFlow-Hiring%2520Platform-blue
-https://img.shields.io/badge/React-18.2.0-61dafb
-https://img.shields.io/badge/TypeScript-5.0-3178c6
+<div align="center">
 
-🚀 Quick Start
-Prerequisites
-Node.js 16+
+![TalentFlow](https://img.shields.io/badge/TalentFlow-Hiring%20Platform-007bff)
+![React](https://img.shields.io/badge/React-18.2.0-61dafb)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6)
+![Redux](https://img.shields.io/badge/Redux-Toolkit-764abc)
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38b2ac)
 
-npm or yarn
+*A comprehensive, full-stack hiring platform that streamlines the recruitment process for both HR teams and candidates*
 
-Modern web browser
+</div>
 
-Installation & Running
-Clone the repository
+## 📋 Table of Contents
 
-bash
+- [🚀 Quick Start](#-quick-start)
+- [🏗️ Architecture](#️-architecture)
+- [👥 User Roles](#-user-roles)
+- [✨ Features](#-features)
+- [🔑 Demo Access](#-demo-access)
+- [🛠️ Development](#️-development)
+- [🚀 Deployment](#-deployment)
+
+## 🚀 Quick Start
+
+### Prerequisites
+- **Node.js** 16.0 or higher
+- **npm** or **yarn** package manager
+- Modern web browser with ES6+ support
+
+### Installation & Running
+
+1. **Clone the repository**
+```bash
 git clone <repository-url>
 cd talentflow
-Install dependencies
+```
 
-bash
+2. **Install dependencies**
+```bash
 yarn install
-Start the development server
+```
 
-bash
+3. **Start the development server**
+```bash
 yarn start
-Access the application
+```
 
-text
+4. **Access the application**
+```
 http://localhost:3000
-Important: Use yarn start instead of npm start or npm run dev to ensure all dependencies and scripts work correctly.
+```
 
-🏗️ Architecture Overview
-Tech Stack
-Frontend: React 18, TypeScript, Redux Toolkit
+> **⚠️ Important**: Use `yarn start` instead of `npm start` or `npm run dev` to ensure all dependencies and scripts work correctly with the project configuration.
 
-Styling: Tailwind CSS, Custom Components
+## 🏗️ Architecture
 
-Routing: React Router v6
+### Tech Stack
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React 18, TypeScript, Redux Toolkit |
+| **Styling** | Tailwind CSS, Custom Design System |
+| **Routing** | React Router v6 |
+| **State Management** | Redux Toolkit with RTK Patterns |
+| **Database** | IndexedDB (via Dexie) |
+| **API Simulation** | MSW (Mock Service Worker) |
+| **Build Tool** | Create React App |
+| **UI Components** | Headless UI, Hero Icons |
 
-Database: IndexedDB (via Dexie)
-
-API Simulation: MSW (Mock Service Worker)
-
-Build Tool: Vite
-
-Project Structure
-text
+### Project Structure
+```
 src/
-├── components/          # React components
-│   ├── auth/           # Authentication
-│   ├── common/         # Shared components
-│   ├── jobs/           # Job management
-│   ├── candidates/     # Candidate tracking
-│   └── assessments/    # Assessment builder
-├── hooks/              # Custom React hooks
-├── store/              # Redux store & slices
-├── services/           # API & database services
-├── types/              # TypeScript definitions
-├── utils/              # Helper functions
-└── mocks/              # Mock data & API handlers
-👥 User Roles & Access
-HR Team
-Manage job postings (create, edit, archive, reorder)
+├── 📁 components/          # React components
+│   ├── 🔐 auth/           # Authentication components
+│   ├── 🔧 common/         # Shared UI components
+│   ├── 💼 jobs/           # Job management features
+│   ├── 👥 candidates/     # Candidate tracking system
+│   └── 📝 assessments/    # Assessment builder tools
+├── 🪝 hooks/              # Custom React hooks
+├── 🗃️ store/              # Redux store & slices
+├── 🔌 services/           # API & database services
+├── 📊 types/              # TypeScript definitions
+├── 🛠️ utils/              # Helper functions
+└── 🎭 mocks/              # Mock data & API handlers
+```
 
-Track candidates through hiring pipeline
+## 👥 User Roles
 
-Create custom assessments
+### 🏢 HR Team Portal
+- **📊 Jobs Board** - Create, edit, archive, and reorder job postings
+- **👥 Candidate Management** - Track applicants through hiring pipeline
+- **📋 Kanban View** - Drag & drop candidates between stages
+- **🎯 Assessment Builder** - Create custom job assessments
+- **📈 Analytics** - View application metrics and statistics
 
-Analyze application metrics
+### 👤 Candidate Portal
+- **🔍 Job Discovery** - Browse and search available positions
+- **📝 Application Portal** - Multi-step application forms
+- **🧪 Assessment Center** - Complete skill-based assessments
+- **📱 Dashboard** - Track application status and history
 
-Candidates
-Browse available positions
+## ✨ Features
 
-Apply to jobs with multi-step forms
+### 💼 Jobs Management
+| Feature | Description |
+|---------|-------------|
+| **🎯 Interactive Job Board** | Server-like pagination, filtering, and search |
+| **🔄 Drag & Drop Reordering** | Optimistic updates with rollback on failure |
+| **📝 Job Creation & Editing** | Form validation (title required, unique slug) |
+| **📁 Archive/Unarchive** | Status tracking with easy toggling |
+| **🔗 Deep Linking** | Direct access to jobs via `/jobs/:jobId` |
+| **🔍 Advanced Search** | Filter by title, status, and tags |
 
-Complete skill assessments
+### 👥 Candidate Pipeline
+| Feature | Description |
+|---------|-------------|
+| **⚡ Virtualized List** | Optimized for **1000+ candidates** with smooth scrolling |
+| **📊 Kanban Board** | Visual pipeline management with drag & drop |
+| **🎯 Advanced Filtering** | Search by name, email, and current stage |
+| **📋 Candidate Profiles** | Comprehensive timeline view with notes |
+| **💬 Notes System** | @mentions support with user suggestions |
+| **🔄 Stage Transitions** | Smooth drag & drop between hiring stages |
 
-Track application status
+### 📝 Assessment Center
+| Feature | Description |
+|---------|-------------|
+| **🎨 Visual Builder** | Live preview during assessment creation |
+| **📊 Multiple Question Types** | Single/multiple choice, text, numeric, file upload |
+| **🎮 Conditional Logic** | Dynamic form flows based on previous answers |
+| **✅ Validation Rules** | Required fields, numeric ranges, max length |
+| **💾 Response Persistence** | Local storage with automatic saving |
 
-🔑 Demo Credentials
-HR Access
-text
-Email: hr@talentflow.com
-Password: hr123
+### 🔄 Data & API Layer
+| Feature | Description |
+|---------|-------------|
+| **🎭 Mock REST API** | MSW with realistic API simulation |
+| **💾 Local Persistence** | IndexedDB via Dexie for offline capability |
+| **⏱️ Realistic Simulation** | 200-1200ms latency for authentic experience |
+| **🔄 Error Handling** | 5-10% error rate on write operations |
+| **📱 Offline-First** | State restoration on page refresh |
 
-Email: admin@talentflow.com  
-Password: admin123
-Candidate Access
-text
-Email: candidate@talentflow.com
-Password: candidate123
+## 🔑 Demo Access
 
-Email: john.doe@email.com
-Password: john123
-✨ Key Features
-🎯 Jobs Management
-Job Board with pagination, filtering, and search
+### 🏢 HR Team Credentials
+| Email | Password | Role |
+|-------|----------|------|
+| `hr@talentflow.com` | `hr123` | HR Manager |
+| `admin@talentflow.com` | `admin123` | Administrator |
+| `recruiter@company.com` | `recruiter123` | Recruiter |
 
-Drag & Drop reordering with optimistic updates
+### 👤 Candidate Credentials
+| Email | Password | Purpose |
+|-------|----------|---------|
+| `candidate@talentflow.com` | `candidate123` | Primary Demo |
+| `john.doe@email.com` | `john123` | Alternative |
+| `sarah.wilson@email.com` | `sarah123` | Testing |
 
-Job Creation & Editing with validation
+## 📊 Sample Data
 
-Archive/Unarchive functionality
+The application comes pre-loaded with **realistic sample data**:
 
-Deep Linking to individual jobs
+- **📋 25 Jobs** - Mixed active/archived status with various roles
+- **👥 1000+ Candidates** - Randomly assigned to jobs and stages
+- **🎯 3+ Assessments** - Complex assessments with 10+ questions each
+- **🏢 Company Data** - Realistic job descriptions and requirements
 
-👥 Candidate Pipeline
-Virtualized List for 1000+ candidates
+## 🛠️ Development
 
-Kanban Board for stage management
-
-Candidate Profiles with timeline tracking
-
-Advanced Search by name, email, and stage
-
-Notes with @mentions support
-
-📝 Assessments
-Visual Builder for custom assessments
-
-Multiple Question Types:
-
-Single/Multiple choice
-
-Short/Long text
-
-Numeric ranges
-
-File upload stubs
-
-Conditional Logic for dynamic forms
-
-Live Preview during creation
-
-Validation Rules enforcement
-
-🔄 Data Management
-Local Persistence via IndexedDB
-
-API Simulation with realistic latency
-
-Error Handling with rollback mechanisms
-
-Offline-First architecture
-
-🛠️ Development
-Available Scripts
-bash
-yarn start          # Start development server
+### Available Scripts
+```bash
+yarn start          # Start development server on port 3000
 yarn build          # Create production build
 yarn test           # Run test suite
-yarn lint           # Run ESLint
-yarn type-check     # Run TypeScript compiler
-Environment Setup
-Ensure Node.js 16+ is installed
+yarn lint           # Run ESLint for code quality
+yarn type-check     # Run TypeScript compiler checks
+```
 
-Use yarn for package management
+### Key Development Features
+- **🔥 Hot Reloading** - Instant feedback during development
+- **🛡️ Type Safety** - Comprehensive TypeScript coverage
+- **🎯 State Management** - Redux Toolkit with optimized updates
+- **📱 Responsive Design** - Mobile-first approach with Tailwind CSS
+- **♿ Accessibility** - WCAG compliant components
+- **🚨 Error Boundaries** - Graceful error handling
 
-The app includes all mock data - no external APIs needed
+## 🎨 UI/UX Highlights
 
-Key Development Features
-Hot Reloading: Instant feedback during development
+- **🎨 Modern Design System** - Consistent component library
+- **📱 Responsive Layout** - Seamless experience across all devices
+- **✨ Smooth Animations** - Micro-interactions for better engagement
+- **🎯 Professional Color Scheme** - Proper contrast ratios and accessibility
+- **⏳ Loading States** - Skeleton screens for better UX
+- **🧭 Intuitive Navigation** - Clear information hierarchy
 
-Type Safety: Full TypeScript coverage
+## 🚀 Deployment
 
-State Management: Redux Toolkit with RTK Query patterns
-
-Responsive Design: Mobile-first approach with Tailwind CSS
-
-Accessibility: WCAG compliant components
-
-🎨 UI/UX Highlights
-Modern Design System with consistent components
-
-Responsive Layout that works on all devices
-
-Smooth Animations and transitions
-
-Loading States and error boundaries
-
-Professional Color Scheme with proper contrast
-
-📊 Data & Performance
-1000+ Candidates with virtualized rendering
-
-25+ Sample Jobs with mixed statuses
-
-3+ Complex Assessments with 10+ questions each
-
-Optimized Performance with lazy loading
-
-Efficient State Updates with Redux optimizations
-
-🔧 Configuration
-Mock API Behavior
-Latency Simulation: 200-1200ms response times
-
-Error Rate: 5-10% on write operations
-
-Persistence: All data stored locally in browser
-
-Customization
-Modify src/data/mock*.ts files for sample data
-
-Adjust API behavior in src/mocks/handlers.ts
-
-Customize styles in src/styles/globals.css
-
-🚀 Deployment
-Production Build
-bash
+### Production Build
+```bash
 yarn build
-The build artifacts will be stored in the dist/ directory, ready for deployment to any static hosting service like Vercel, Netlify, or AWS S3.
+```
 
-Environment Variables
-No environment variables required - the application is fully self-contained.
+The build artifacts will be stored in the `build/` directory, ready for deployment to any static hosting service.
 
-🤝 Contributing
-Fork the repository
+### Supported Platforms
+- **▲ Vercel** - Zero configuration deployment
+- **🌐 Netlify** - Drag and drop deployment
+- **☁️ AWS S3** - Static website hosting
+- **⚡ GitHub Pages** - Free hosting for open source
 
-Create a feature branch (git checkout -b feature/amazing-feature)
+### Deployment Notes
+- **🔧 No environment variables required** - Fully self-contained application
+- **🔄 Client-side routing support** - Compatible with SPAs
+- **⚡ Optimized builds** - Proper cache headers and compression
 
-Commit your changes (git commit -m 'Add amazing feature')
+## 🔧 Configuration & Customization
 
-Push to the branch (git push origin feature/amazing-feature)
+### Mock API Behavior
+- **⏱️ Latency Simulation**: 200-1200ms response times
+- **❌ Error Rate**: 5-10% on write operations
+- **💾 Persistence**: All data stored locally in browser's IndexedDB
 
-Open a Pull Request
+### Customization Points
+- Modify `src/data/mock*.ts` files for sample data
+- Adjust API behavior in `src/mocks/handlers.ts`
+- Customize styles in Tailwind configuration
+- Add new question types in assessment builder
 
-📝 License
+## 🤝 Contributing
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
+4. **Push to the branch** (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request**
+
+## 📝 License
+
 This project is for demonstration purposes as part of a technical assignment.
 
-🆘 Troubleshooting
-Common Issues
-Port already in use
+## 🆘 Troubleshooting
 
-bash
-# Kill process on port 3000
-npx kill-port 3000
-yarn start
-Dependency issues
+### Common Issues & Solutions
 
-bash
-rm -rf node_modules
-yarn install
-TypeScript errors
+| Issue | Solution |
+|-------|----------|
+| **Port 3000 already in use** | `npx kill-port 3000` then `yarn start` |
+| **Dependency conflicts** | `rm -rf node_modules && yarn install` |
+| **TypeScript errors** | `yarn type-check` for detailed errors |
+| **Mock API not working** | Check browser console for MSW registration |
 
-bash
-yarn type-check
-Support
-For issues related to this implementation, please check:
+### Support Resources
+- **🔍 Browser Console** - Detailed error messages and warnings
+- **🌐 Network Tab** - Monitor API calls and responses
+- **💾 Application Tab** - Verify IndexedDB status and data
+- **⚛️ React DevTools** - Component debugging and state inspection
 
-Browser console for errors
+---
 
-Network tab for API calls
+<div align="center">
 
-Application tab for IndexedDB status
+
+</div>
