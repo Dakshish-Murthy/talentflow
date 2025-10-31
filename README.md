@@ -26,7 +26,7 @@
 
 ### Prerequisites
 - **Node.js** 16.0 or higher
-- **npm** or **yarn** package manager
+- **yarn** package manager
 - Modern web browser with ES6+ support
 
 ### Installation & Running
