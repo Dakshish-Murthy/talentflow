@@ -8,7 +8,6 @@
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-764abc)
 ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38b2ac)
 
-*A comprehensive, full-stack hiring platform that streamlines the recruitment process for both HR teams and candidates*
 
 </div>
 
